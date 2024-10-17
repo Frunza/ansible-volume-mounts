@@ -82,6 +82,6 @@ sh run.sh
 ```
 
 The following happens:
-1) the first command builds the docker image, passing the private key value as an argument and tagging it as *respondansible*
+1) the first command builds the docker image, passing the private key value as an argument and tagging it as *mountansible*
 2) the docker image sets up the SSH access by copying the value of the `SSH_PRIVATE_KEY` argument to the standard location for SSH keys
-3) the second command uses docker-compose to run the `Ansible` playboog that prepares the mount and makes it available
+3) the second command uses docker-compose to run the `Ansible` playbook that prepares the mount and makes it available
