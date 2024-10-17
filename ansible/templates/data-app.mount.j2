@@ -1,0 +1,12 @@
+[Unit]
+Description=Mount app from nas
+After=network.target
+
+[Mount]
+What={{ mountAppServerLocation }}
+Where={{ appDataDir }}
+Type={{ mountType }}
+Options=_netdev,auto
+
+[Install]
+WantedBy=multi-user.target
