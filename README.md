@@ -10,11 +10,10 @@ Note: `Ansible` needs SSH access to the target machine. You can find out how to 
 
 A Linux or MacOS machine for local development. If you are running Windows, you first need to set up the *Windows Subsystem for Linux (WSL)* environment.
 
-You need `docker cli` and `docker-compose` on your machine for testing purposes, and/or on the machines that run your pipeline.
-You can check both of these by running the following commands:
+You need `docker cli` on your machine for testing purposes, and/or on the machines that run your pipeline.
+You can these by running the following command:
 ```sh
 docker --version
-docker-compose --version
 ```
 
 Make sure that you already have a docker container with SSH access.
@@ -84,4 +83,4 @@ sh run.sh
 The following happens:
 1) the first command builds the docker image, passing the private key value as an argument and tagging it as *mountansible*
 2) the docker image sets up the SSH access by copying the value of the `SSH_PRIVATE_KEY` argument to the standard location for SSH keys
-3) the second command uses docker-compose to run the `Ansible` playbook that prepares the mount and makes it available
+3) the second command uses docker compose to run the `Ansible` playbook that prepares the mount and makes it available
